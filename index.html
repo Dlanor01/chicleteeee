@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#090910">
-  <title>Follow.js — Animação Interativa</title>
+  <meta name="theme-color" content="#080812">
+  <title>Salamandra.js — Animação Viva</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="app">
     <header class="topbar">
       <div class="brand">
-        <span class="brand-mark"></span>
-        FOLLOW<span class="muted">.JS</span>
+        <span class="brand-mark">✦</span>
+        SALAMANDRA<span class="accent">.JS</span>
       </div>
       <div class="status">
         <span class="status-dot"></span>
@@ -21,55 +21,64 @@
     </header>
 
     <section class="intro">
-      <p class="eyebrow">EXPERIMENTO INTERATIVO</p>
-      <h1>Uma cadeia que<br><span>segue seu movimento.</span></h1>
+      <p class="eyebrow">ANIMAÇÃO INTERATIVA</p>
+      <h1>Uma salamandra que<br><span>segue você.</span></h1>
       <p class="subtitle">
-        Mova o cursor ou toque na tela. Os segmentos conectados
-        acompanharão seu movimento.
+        Mova o mouse ou toque na tela e veja a salamandra seguir
+        seu movimento. Ela se move sozinha e reage a você!
       </p>
     </section>
 
     <section class="stage" id="stage">
-      <div class="stage-hint" id="hint">
-        MOVA O MOUSE OU TOQUE NA TELA
-      </div>
       <canvas id="canvas"></canvas>
-      <div class="stage-footer">
-        <span>CANVAS 2D</span>
-        <span id="segment-count">24 SEGMENTOS</span>
+
+      <div class="stage-hint" id="hint">
+        <span>☝</span> MOVA O MOUSE OU TOQUE NA TELA
+      </div>
+
+      <div class="creature-label">
+        SALAMANDRA <span>•</span> 100% VIVA
       </div>
     </section>
 
     <section class="controls">
       <label class="control">
-        <span>
-          Quantidade de segmentos
-          <strong id="count-value">24</strong>
+        <span class="control-heading">
+          <span>♧ &nbsp; Tamanho da salamandra</span>
+          <strong id="sizeValue">1.0</strong>
         </span>
-        <input id="count" type="range" min="8" max="48" value="24">
+        <input id="size" type="range" min="0.65" max="1.6"
+               value="1" step="0.05">
       </label>
 
       <label class="control">
-        <span>
-          Comprimento dos segmentos
-          <strong id="length-value">13</strong>
+        <span class="control-heading">
+          <span>◴ &nbsp; Velocidade</span>
+          <strong id="speedValue">1.0</strong>
         </span>
-        <input id="length" type="range" min="7" max="22" value="13">
+        <input id="speed" type="range" min="0.4" max="2"
+               value="1" step="0.1">
+      </label>
+
+      <label class="control">
+        <span class="control-heading">
+          <span>◉ &nbsp; Brilho</span>
+          <strong id="glowValue">1.0</strong>
+        </span>
+        <input id="glow" type="range" min="0.3" max="2"
+               value="1" step="0.1">
       </label>
 
       <label class="toggle-control">
-        Mostrar juntas
-        <input id="joints" type="checkbox" checked>
+        <span>Mostrar rastros</span>
+        <input id="trails" type="checkbox" checked>
+        <span class="switch"></span>
       </label>
-
-      <button id="reset" type="button">
-        Reiniciar animação ↺
-      </button>
     </section>
 
     <footer class="footer">
-      <span>HTML · CSS · JAVASCRIPT</span>
-      <span>Projeto interativo</span>
+      <span class="footer-heart">♥</span>
+      Feito com JavaScript <span>•</span> HTML <span>•</span> CSS
     </footer>
   </main>
 
