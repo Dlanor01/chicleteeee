@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090910">
+  <title>Follow.js — Animação Interativa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark"></span>
+        FOLLOW<span class="muted">.JS</span>
+      </div>
+      <div class="status">
+        <span class="status-dot"></span>
+        ANIMAÇÃO ATIVA
+      </div>
+    </header>
+
+    <section class="intro">
+      <p class="eyebrow">EXPERIMENTO INTERATIVO</p>
+      <h1>Uma cadeia que<br><span>segue seu movimento.</span></h1>
+      <p class="subtitle">
+        Mova o cursor ou toque na tela. Os segmentos conectados
+        acompanharão seu movimento.
+      </p>
+    </section>
+
+    <section class="stage" id="stage">
+      <div class="stage-hint" id="hint">
+        MOVA O MOUSE OU TOQUE NA TELA
+      </div>
+      <canvas id="canvas"></canvas>
+      <div class="stage-footer">
+        <span>CANVAS 2D</span>
+        <span id="segment-count">24 SEGMENTOS</span>
+      </div>
+    </section>
+
+    <section class="controls">
+      <label class="control">
+        <span>
+          Quantidade de segmentos
+          <strong id="count-value">24</strong>
+        </span>
+        <input id="count" type="range" min="8" max="48" value="24">
+      </label>
+
+      <label class="control">
+        <span>
+          Comprimento dos segmentos
+          <strong id="length-value">13</strong>
+        </span>
+        <input id="length" type="range" min="7" max="22" value="13">
+      </label>
+
+      <label class="toggle-control">
+        Mostrar juntas
+        <input id="joints" type="checkbox" checked>
+      </label>
+
+      <button id="reset" type="button">
+        Reiniciar animação ↺
+      </button>
+    </section>
+
+    <footer class="footer">
+      <span>HTML · CSS · JAVASCRIPT</span>
+      <span>Projeto interativo</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
